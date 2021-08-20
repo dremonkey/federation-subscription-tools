@@ -10,3 +10,5 @@ export const pubsub = new RedisPubSub({
   publisher: redis,
   subscriber: redis
 });
+
+// console.log(pubsub)

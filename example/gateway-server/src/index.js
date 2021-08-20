@@ -29,6 +29,8 @@ const apolloUsageReportingPlugin = apolloKey
   ? ApolloServerPluginUsageReporting()
   : ApolloServerPluginUsageReportingDisabled();
 
+console.log(gatewayOptions)
+
 const gateway = new ApolloGateway(gatewayOptions);
 const server = new ApolloServer({
   gateway,

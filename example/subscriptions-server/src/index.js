@@ -105,7 +105,11 @@ import { typeDefs } from "./typeDefs";
           variableValues: msg.payload.variables
         };
 
+        console.log('args', args)
+
         const operationAST = getOperationAST(args.document, args.operationName);
+
+        console.log('operationAST', operationAST)
 
         // Stops the subscription and sends an error message
         if (!operationAST) {

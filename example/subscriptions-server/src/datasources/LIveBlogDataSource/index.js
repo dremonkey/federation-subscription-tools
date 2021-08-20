@@ -23,6 +23,8 @@ export class LiveBlogDataSource extends GatewayDataSource {
     const selections = this.buildNonPayloadSelections(payload, info);
     const payloadData = Object.values(payload)[0];
 
+    console.log('fetchAndMergeNonPayloadPostData > selections', selections)
+
     if (!selections) {
       return payloadData;
     }
@@ -39,6 +41,8 @@ export class LiveBlogDataSource extends GatewayDataSource {
       const response = await this.query(Subscription_GetPost, {
         variables: { id: postID }
       });
+
+      console.log('fetchAndMergeNonPayloadPostData > payloadData', payloadData, response.data.post)
       return this.mergeFieldData(payloadData, response.data.post);
     } catch (error) {
       console.error(error);

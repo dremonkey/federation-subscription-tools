@@ -45,7 +45,7 @@ function Home() {
             <article key={id}>
               <h1>{title}</h1>
               <p>Post ID: {id}</p>
-              <p>By {author.name}</p>
+              {/* <p>By {author.name}</p> */}
               <p>{moment(publishedAt).format("h:mm A MMM D, YYYY")}</p>
               <p>{content}</p>
             </article>

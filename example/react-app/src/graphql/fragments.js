@@ -2,10 +2,10 @@ import { gql } from "@apollo/client";
 
 export const PostFields = gql`
   fragment PostFields on Post {
-    author {
-      id
-      name
-    }
+    # author {
+    #   id
+    #   name
+    # }
     content
     id
     publishedAt
